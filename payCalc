@@ -1,0 +1,35 @@
+package week6;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class tuitionCalc {
+
+	public static void main(String[] args) {
+		DecimalFormat tp = new DecimalFormat("$00.00");
+		Scanner a = new Scanner(System.in);
+		System.out.println("For how many days will the pay be double? ");
+		int doubleDays = a.nextInt();
+
+			while(doubleDays<=0) {
+				System.out.print("The number of days must be at least one.");
+				System.out.println(" For how many days will the pay be double? ");
+				doubleDays = a.nextInt();
+			}
+			
+			double total = 0;
+			double pay = 00.01;
+			double grandtotal = 0.01;
+			System.out.println("Day\t\t Total pay");
+			System.out.println("---------------------------");
+				for (int i=1; i<=doubleDays; i++) {
+					total += grandtotal; //Adding the tuition total
+					System.out.println(i + "\t\t\t" + tp.format(grandtotal));
+					grandtotal = pay * 2;	
+				
+				}
+				System.out.println("---------------------------");
+				System.out.println("Total\t\t\t" + tp.format(total));
+				
+				
+	}
+
+}
