@@ -1,0 +1,16 @@
+// a personal project
+
+package GameFiles;
+import java.util.Scanner;
+import java.lang.Math;
+public class blackjack {
+public static void yourHand() {
+	int card1 = Math.Random*11;
+}	//end yourHand
+public static void main(String[] args) {
+	Scanner a = new Scanner(System.in);
+
+
+	}	//end main
+
+}	//end class
