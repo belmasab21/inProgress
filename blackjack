@@ -1,5 +1,3 @@
-// a personal project
-
 package gameProjects;
 import java.util.Scanner;
 import java.lang.Math;
@@ -13,10 +11,10 @@ DecimalFormat card = new DecimalFormat("0");
 
 
 //------------The Hands---------------------------------
-double card1 = Math.random()*12;
-double card2 = Math.random()*12;
-double dCard1 = Math.random()*12;
-double dCard2 = Math.random()*12;
+double card1 = Math.random()*11 + 1;
+double card2 = Math.random()*11 + 1;
+double dCard1 = Math.random()*11 + 1;
+double dCard2 = Math.random()*11 + 1;
 double yourTotal = card1 + card2;
 double dealerTotal = dCard1 + dCard2;
 double newTotal = 0;
@@ -28,23 +26,28 @@ int hold;
 	System.out.println("Would you like to hit or hold?");
 	System.out.println("1. Hit\n2. Hold");
 		double userChoice = a.nextDouble();
-			while (userChoice != 1 || userChoice != 2) {
+			while (userChoice < 1 || userChoice > 2) {
 	System.out.println("Invalid input. Select choices 1 or 2");
+			userChoice = a.nextDouble();
 			}	//end while
 	
 		if (userChoice == 1) {
 			yourTotal = yourTotal + Math.random();
+			System.out.println("You're at " + yourTotal + ". Would you like to hit or hold?");
 		}	//end if
 		else {
-			System.out.println("Your total is " + yourTotal);
+			hold();
 		}
+}	//end main
+public static double hold(yourTotal) {
+	DecimalFormat card = new DecimalFormat("0");
+	System.out.println("Your total is " + card.format(yourTotal) + ". ");
+}	//end hold
+
+
+
 	
 
-
-
-
-	}	//end main
-
-
+	
 
 }	//end class
