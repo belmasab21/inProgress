@@ -1,3 +1,5 @@
+//NOTE: This project is finished! It can be found in the projects respritory under the same name.
+
 package gameProjects;
 import java.util.Scanner;
 import java.lang.Math;
