@@ -1,10 +1,11 @@
-package RANDOM;
+package week9;
 import java.util.Scanner;
-public class RANDOM {
+public class assignment1_isbn {
 
 	public static void main(String[] args) {
 		Scanner a = new Scanner(System.in);
-		String first9digits = "";
+		String first9 = "";
+		ISBNCheck(first9);
 		
 	System.out.println("Enter the first 9 digits of an ISBN as a string: ");
 		String userIn = a.nextLine();
@@ -13,11 +14,11 @@ public class RANDOM {
 
 	}	//end main
 
-	public static String ISBNCheck(String first9digits) {
+	public static String ISBNCheck(String first9) {
 		int sum = 0;
-		String first9 = "a1a2a3a4a5a6a7a8a9";
+		first9 = "a1a2a3a4a5a6a7a8a9";
 		for(int i = 0; i < 9; i++) {
-			sum += i + Integer.parseInt(first9.charAt(i-1)+"");
+			sum += i+Integer.parseInt(first9.charAt(i-1)+"");
 		}	//end for
 			int x = sum % 11;
 			if (x == 10) 
@@ -25,9 +26,6 @@ public class RANDOM {
 		
 			else 
 				return first9 + x;
-				
-		
-		
-		
-	}	//end isbncheck
+			
+				}	//end isbncheck
 }	//end class
