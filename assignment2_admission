@@ -1,0 +1,44 @@
+package week10;
+import java.util.Scanner;
+public class assignment2_admission {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the GPA: ");
+			int gpa = sc.nextInt();
+		System.out.println("Enter a score: ");
+			double score = sc.nextDouble();
+			
+		admission a = new admission(gpa, score);
+		
+		
+
+	}	//end main
+
+}	//end public class
+
+class admission {
+private int score;
+private double gpa;
+admission(int s, double g) {
+	score = s;
+	gpa = g;
+	}	//end admission
+
+
+public void evaluate() {
+	if (gpa >= 3.0 && score >= 60 || gpa < 3.0 && score >= 80) {
+		System.out.println("Accepted");
+	}	//end if
+	else {
+		System.out.println("Rejected");
+	}	//end else
+		
+	
+	}	//end evaluate
+public String toString() {
+	return "S1, GPA: " + gpa + " Score: " + score + " " + evaluate()";
+}	//end toString
+
+	
+}	//end class admission
