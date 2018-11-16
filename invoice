@@ -1,0 +1,35 @@
+//week 11, assignment 2
+
+package week11;
+import java.text.DecimalFormat;
+class Purchase {	
+	private String invoice;
+	private double sales;
+	private double tax;
+	private double total;
+		//end purchase
+	Purchase(String i, double s) {
+		this.sales = s;
+		this.tax = s*0.055;
+		while (i.length() < 4) {
+			i = "0".concat(i);
+		}	//end while
+		this.invoice = i;
+		this.total = s + this.tax;
+		}
+	public void display() {
+		DecimalFormat mf = new DecimalFormat("$00.00");
+		System.out.println("Purchase Information");
+		System.out.println("Invoice no:\t" + this.invoice);
+		System.out.println("Sale Amount:\t" + mf.format(this.sales));
+		System.out.println("Tax:\t\t" + mf.format(this.tax));
+		System.out.println("Total Amount:\t" + mf.format(this.total));
+	}	//end display
+public static void main(String [] args) {
+	
+	Purchase p = new Purchase("75", 25.45);
+	p.display();
+		
+	}	//end main
+			
+}	//end assignment 2
