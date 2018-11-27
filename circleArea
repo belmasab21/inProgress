@@ -1,0 +1,34 @@
+package week12;
+import java.util.Scanner;
+import java.lang.Math;
+class getRadius {
+private double radius;
+getRadius(double radius) {
+	Scanner a = new Scanner(System.in);
+	System.out.println("Enter Circle #1's Radius: ");
+		 double r1 = a.nextDouble();
+	System.out.println("Enter Circle #2's Radius: ");
+		 double r2 = a.nextDouble();
+
+	}	//end getRadius
+class setArea {
+setArea() {
+	double c1, c2;
+	c1 = radius;
+	c2 = radius;
+	}	//end constructor
+}	//end setArea
+public class getArea {
+getArea() {
+double area;
+area = Math.PI*radius*radius;
+System.out.println(area);
+	}	//end constructor
+}
+public static void main(String[] args) {
+	 getRadius c1 = new getRadius(r1);
+	 getRadius c2 = new getRadius(r2);
+	System.out.println("Circle #1's Area is: " + c1.getArea());
+	}	//end main
+}	//end project
+
