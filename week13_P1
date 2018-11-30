@@ -1,0 +1,29 @@
+package week13;
+import java.util.Scanner;
+public class student {
+	public static void main(String[] args) {
+	Scanner a = new Scanner(System.in);
+System.out.println("Enter an ID Number: ");
+		int idInput = a.nextInt();
+	
+	student studentArray[] = new student[10];
+	studentArray[0] = new student("Kevin Lang", 5658, 3.23);
+	studentArray[1] = new student("Joe Hazelton", 8451, 3.12);
+	studentArray[2] = new student("Jean Hooton", 1302, 2.98);
+	studentArray[3] = new student("Susan Fowler", 7580, 3.98);
+	studentArray[4] = new student("Henry Cusworth", 7541, 2.89);
+	studentArray[5] = new student("Hans Denton", 2850, 3.76);
+	studentArray[6] = new student("Jared Simmons", 7589, 3.23);
+	studentArray[7] = new student("Debra Beamer", 1254, 3.22);
+	studentArray[8] = new student("Gary Bradley", 2898, 3.84);
+	studentArray[9] = new student("Glen Gerson", 2771, 2.15);
+	}	//end main
+	private String name;
+	private int idNum;
+	private double gpa;
+student(String name, int idNum, double gpa) {
+		this.name = name;
+		this.idNum = idNum;
+		this.gpa = gpa;
+	}	//end constructor
+}	//end class
